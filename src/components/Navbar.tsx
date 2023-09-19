@@ -9,6 +9,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+const navLogoVariants: Variants = {
+  hover: {
+    scale: 1.10
+  },
+  init: {
+    scale: 1,
+    rotate: 0
+  }
+}
+
 const navItemsVariants: Variants = {
   open: {
     opacity: 1,
@@ -80,6 +90,26 @@ const Navbar = () => {
         <motion.ul className={`md:h-auto md:flex md:items-center ${
                 navbar ? 'col-start-1 row-start-2 col-span-2 gap-y-8' : 'hidden'
               }`} >
+          <motion.li
+            variants={navLogoVariants}
+            whileHover={"hover"}
+            initial={'init'}
+            className={mobile ? "hidden" : ""}
+          >
+            <Link
+              to={'hero'}  
+              spy={false} 
+              smooth={true} 
+              offset={-80} 
+              duration={500}
+            >
+              <img 
+                src={`/img/logo.png`} 
+                alt="nav-logo"
+                className='w-14 h-auto mr-8'
+              />
+            </Link>
+          </motion.li>
           {
             navbarLinks.map((link) => (
               <motion.li 

@@ -3,7 +3,7 @@ import { Hero, About, Projects, Skills, Certificates } from '@/components'
 export default function Page() {
   return (
     <main>
-      <section>
+      <section id='hero'>
         <Hero/>
       </section>
       <section id='about'>
