@@ -1,10 +1,23 @@
-import { Hero } from '@/components'
-import Image from 'next/image'
+import { Hero, About, Projects, Skills, Certificates } from '@/components'
 
-export default function Home() {
+export default function Page() {
   return (
     <main>
-      <Hero/>
+      <section>
+        <Hero/>
+      </section>
+      <section id='about'>
+        <About/>
+      </section>
+      <section id='projects'>
+        <Projects/>
+      </section>
+      <section id='certificates'>
+        <Certificates/>
+      </section>
+      <section id='skills'>
+        <Skills/>
+      </section>
     </main>
   )
 }
