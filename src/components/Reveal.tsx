@@ -44,14 +44,14 @@ const Reveal = ({ children, width = "fit-content", reversed}: RevealProps) => {
                 variants={revealVariants}
                 initial={"hidden"}
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.25 }}
+                transition={{ duration: 0.3, delay: 0.25 }}
                 >{children}
             </motion.div>
             <motion.div
                 variants={slideVariants}
                 initial={"init"}
                 animate={slideControls}
-                transition={{ duration: 0.5, ease: "easeIn" }}
+                transition={{ duration: 0.3, ease: "easeIn" }}
                 style={{position: "absolute", top: 4, bottom: 4, left: 0, right: 0, zIndex: 20}}
                 className={`${reversed ? "bg-white-light dark:bg-black-dark" : "bg-black-dark dark:bg-white-light"} animate-pulse`}>
             </motion.div>
