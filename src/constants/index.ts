@@ -57,7 +57,7 @@ export const projects = [
             {
                 icon:"fa-brands fa-github",
                 name:"Repository",
-                url:"https://github.com/joaopedro-cabral/montessori-at-home"
+                url:"https://github.com/joaopedro-cabral/product-list-webapp"
             },
             {
                 icon:"fa-solid fa-globe",
